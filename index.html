@@ -55,11 +55,11 @@
     <body>
         <h1 class="h">레전드 상영관</h1>
         <div class="search">
-            영화 검색 : <input type="text" class="text" />
-            <button class="btn1">검색</button>
+            영화 검색 : <input type="text" class="text" id="searchInput" />
+            <button onclick="findMovie()" class="btn1" id="findBtn">검색</button>
         </div>
         <div class="movieBox" id="m-box">
-            <li class="movieCard" id="m-card">
+            <li onclick="showAlert()" class="movieCard" id="m-card">
                 <img class="movieImage" src="" alt="이미지없음." />
                 <div calss="poster">
                     <h2 class="movieTitle">title</h2>
