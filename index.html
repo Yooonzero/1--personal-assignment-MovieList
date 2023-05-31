@@ -1,53 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="01.js"></script>
-    <title>"레전드 영화관"</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="01.js"></script>
+        <title>"레전드 영화관"</title>
 
-    <style>
-      * {
-        font-style: oblique;
-      }
-      .h {
-        background-color: yellow;
-        color: skyblue;
+        <style>
+            * {
+                font-style: oblique;
+            }
+            .h {
+                background-color: yellow;
+                color: skyblue;
 
-        margin: auto;
-        height: 100px;
+                margin: auto;
+                height: 100px;
 
-        text-align: center;
-        font-size: 60px;
-      }
-      .search {
-        background-color: aquamarine;
-        text-align: center;
+                text-align: center;
+                font-size: 60px;
+            }
+            .search {
+                background-color: aquamarine;
+                text-align: center;
 
-        height: 45px;
-        padding: 10px 0px 10px 0px;
+                height: 45px;
+                padding: 10px 0px 10px 0px;
 
-        font-size: 23px;
-        border-bottom: 1px solid black;
-      }
-      .text {
-        border-radius: 5px;
-        border-color: aqua;
-        font-size: 30px;
-      }
-      .btn1 {
-        color: black;
-        background-color: yellowgreen;
-        font-size: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="h">레전드 상영관</h1>
-    <div class="search">
-      영화 검색 : <input type="text" class="text" />
-      <button class="btn1">검색</button>
-    </div>
-  </body>
+                font-size: 23px;
+                border-bottom: 1px solid black;
+            }
+            .search > button:hover {
+                border: 2px solid white;
+            }
+            .text {
+                border-radius: 5px;
+                border-color: aqua;
+                font-size: 30px;
+            }
+            .btn1 {
+                color: black;
+                background-color: yellowgreen;
+                font-size: 20px;
+            }
+            .movieCard {
+                background-color: orange;
+            }
+            .movieBox {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="h">레전드 상영관</h1>
+        <div class="search">
+            영화 검색 : <input type="text" class="text" />
+            <button class="btn1">검색</button>
+        </div>
+        <div class="movieBox" id="m-box">
+            <li class="movieCard" id="m-card">
+                <img class="movieImage" src="" alt="이미지없음." />
+                <div calss="poster">
+                    <h2 class="movieTitle">title</h2>
+                    <p class="movieOverview">overview</p>
+                    <p class="movieVoteAverage">vote_average</p>
+                </div>
+            </li>
+            <li class="movieCard" id="m-card">
+                <img class="movieImage" src="" alt="이미지없음." />
+                <div calss="poster">
+                    <h2 class="movieTitle">title</h2>
+                    <p class="movieOverview">overview</p>
+                    <p class="movieVoteAverage">vote_average</p>
+                </div>
+            </li>
+            <li class="movieCard" id="m-card">
+                <img class="movieImage" src="" alt="이미지없음." />
+                <div calss="poster">
+                    <h2 class="movieTitle">title</h2>
+                    <p class="movieOverview">overview</p>
+                    <p class="movieVoteAverage">vote_average</p>
+                </div>
+            </li>
+        </div>
+    </body>
 </html>
