@@ -1,22 +1,25 @@
 const options = {
-    method: 'GET',
-    headers: {
-        accept: 'application/json',
-        Authorization:
-            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZTE5ZDcyMGQ4YTM5Mzg2Njk3MjU5ZTcxNjNlZjhiYyIsInN1YiI6IjY0NzA4N2I5NzcwNzAwMDBkZjEzZGQ1NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qsdY4rXn-7jYUf8PwRXStzlDcISDYLBTZbW2bJ_j07w',
-    },
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZTE5ZDcyMGQ4YTM5Mzg2Njk3MjU5ZTcxNjNlZjhiYyIsInN1YiI6IjY0NzA4N2I5NzcwNzAwMDBkZjEzZGQ1NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qsdY4rXn-7jYUf8PwRXStzlDcISDYLBTZbW2bJ_j07w",
+  },
 };
 
-fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
-    .then((response) => response.json())
-    .then((data) => {
-        let rows = data.results;
-        rows.forEach((a) => {
-            let title = a.title;
-            let overvieW = a.overview;
-            let poster_path = a.poster_path;
-            let vote_average = a.vote_average;
-            console.log(title, overvieW, poster_path, vote_average);
-        });
-    })
-    .catch((err) => console.error(err));
+fetch(
+  "https://api.themoviedb.org/3/movie/top_rated?api_key=5e19d720d8a39386697259e7163ef8bclanguage=ko-KR&page=1",
+  options
+)
+  .then((response) => response.json())
+  .then((data) => {
+    let rows = data.results;
+    rows.forEach((a) => {
+      let title = a.title;
+      let overview = a.overview;
+      let poster_path = a.poster_path;
+      let vote_average = a.vote_average;
+      console.log(title, overview, poster_path, vote_average);
+    });
+  })
+  .catch((err) => console.error(err));
